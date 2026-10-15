@@ -1,76 +1,116 @@
-
 # Expense Tracker
 
-A full-stack application to manage personal expenses.
+A full-stack web application to manage personal expenses, built with React, Node.js, Express.js, and MySQL.
+
+## Features
+
+- User registration and login
+- Add and manage expenses
+- View expense records
+- Update and delete expenses
+- JWT-based authentication
+- MySQL database integration
 
 ## Tech Stack
 
-### Frontend
+**Frontend**
 - React
 - Vite
 - Axios
 - Bootstrap
 
-### Backend
+**Backend**
 - Node.js
 - Express.js
 - MySQL
 - JWT Authentication
+- bcryptjs
 
 ## Project Structure
 
-- `frontend/` - React frontend
-- `backend/` - Express backend
-- `backend/database.sql` - Database setup script
+```text
+expense-tracker/
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── .env.example
+│   └── package.json
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── routes/
+│   ├── .env.example
+│   ├── database.sql
+│   ├── package.json
+│   └── server.js
+├── .gitignore
+└── README.md
+```
 
 ## Prerequisites
 
 - Node.js and npm
-- MySQL
+- MySQL Server
+- Git
 
-## Setup
+## Installation and Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd jforce
+git clone https://github.com/zaidshaikh7300/expense-tracker.git
+cd expense-tracker
 ```
 
-### 2. Setup backend
+### 2. Set up the database
+
+1. Start your MySQL server.
+2. Create the database and import the SQL script from `backend/database.sql`.
+3. Configure your database credentials in `backend/.env`.
+
+### 3. Set up the backend
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file using `.env.example`
-and configure your local database credentials.
+Create a `.env` file using `.env.example` and configure your local database credentials and JWT secret.
+
+Start the backend in development mode:
 
 ```bash
-npm run
+npm run dev
 ```
 
-Run the appropriate start script listed in
-`backend/package.json`.
+The backend runs on the port configured in your `.env` file.
 
-### 3. Setup frontend
+### 4. Set up the frontend
 
-Open a second terminal:
+Open a second terminal from the project root:
 
 ```bash
 cd frontend
 npm install
+```
+
+Create a `.env` file using `frontend/.env.example` and configure the API URL.
+
+Start the frontend:
+
+```bash
 npm run dev
 ```
 
-Create the frontend `.env` file using `.env.example`.
+Open the local URL displayed by Vite in your terminal.
 
-## Database
+## Environment Variables
 
-Create the required MySQL database and import
-`backend/database.sql`.
+Configure the required environment variables in the frontend and backend `.env` files.
 
-## Security
+Never commit real credentials, database passwords, or JWT secrets to GitHub.
 
-Never commit `.env` files, passwords, or secrets.
+## License
+
+No license has been specified yet.
